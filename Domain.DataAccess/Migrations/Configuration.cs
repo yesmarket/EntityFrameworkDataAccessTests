@@ -3,15 +3,15 @@ using Domain.DataAccess.Support;
 
 namespace Domain.DataAccess.Migrations
 {
-    public sealed class Configuration : DbMigrationsConfiguration<NorthwndDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<BrgDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = true;
+            //AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(NorthwndDbContext context)
+        protected override void Seed(BrgDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

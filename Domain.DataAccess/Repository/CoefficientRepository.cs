@@ -6,23 +6,23 @@ using Domain.DataAccess.Support;
 
 namespace Domain.DataAccess.Repository
 {
-    public class CustomerRepository : ICustomerRepository
+    public class CoefficientRepository : ICoefficientRepository
     {
         private readonly IDbContextFactory _dbContextFactory;
 
-        public CustomerRepository(IDbContextFactory dbContextFactory)
+        public CoefficientRepository(IDbContextFactory dbContextFactory)
         {
             _dbContextFactory = dbContextFactory;
         }
 
-        public IEnumerable<Customer> GetCustomerByName(string name)
+        public IEnumerable<vRuleProperty> GetCoefficientByShortName(string shortName)
         {
-            List<Customer> customers;
+            List<vRuleProperty> properties;
             using (var dbContext = _dbContextFactory.GetContext())
             {
-                customers = dbContext.Customers.Where(c => c.ContactName == "Ryan").ToList();
+                properties = dbContext.vRuleProperties.Where(_ => _.ShortName == shortName).ToList();
             }
-            return customers;
+            return properties;
         }
     }
 }

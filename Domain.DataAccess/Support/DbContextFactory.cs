@@ -2,9 +2,9 @@
 {
     public class DbContextFactory : IDbContextFactory
     {
-        public NorthwndDbContext GetContext()
+        public BrgDbContext GetContext()
         {
-            return new NorthwndDbContext();
+            return new BrgDbContext();
         }
     }
 }

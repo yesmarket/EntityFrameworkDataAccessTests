@@ -39,11 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Customer.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Model\Rule.cs" />
+    <Compile Include="Model\RuleProperty.cs" />
+    <Compile Include="Model\vRuleProperty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\ICustomerRepository.cs" />
+    <Compile Include="Repository\ICoefficientRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

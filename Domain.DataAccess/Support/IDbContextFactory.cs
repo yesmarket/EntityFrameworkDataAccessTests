@@ -2,6 +2,6 @@
 {
     public interface IDbContextFactory
     {
-        NorthwndDbContext GetContext();
+        BrgDbContext GetContext();
     }
 }
